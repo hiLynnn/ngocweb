@@ -284,7 +284,7 @@ a {
     width: 60%;
 }
 
-h2::before {
+.cart h2::before, .order h2::before {
     content: "| ";
     color: yellow;
     font-weight: bold;
