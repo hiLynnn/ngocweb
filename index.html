@@ -1,80 +1,204 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Bán Hàng</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <!-- Banner Khuyến Mãi -->
-    <div class="container">
-        <div class="banner">
-            <img src="banner.jpg" class="img-fluid" alt="Khuyến Mãi">
-        </div>
-
-        <!-- SẢN PHẨM HOT -->
-        <h2 class="text-center mt-4">SẢN PHẨM HOT</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <img src="hot-product.jpg" class="img-fluid" alt="Sản phẩm hot">
-            </div>
-            <div class="col-md-6 d-flex flex-column">
-                <div class="product">
-                    <img src="product1.jpg" alt="Product 1">
-                    <p>$10.00</p>
-                    <button class="btn btn-warning">Đặt hàng</button>
-                </div>
-                <div class="product">
-                    <img src="product2.jpg" alt="Product 2">
-                    <p>$12.00</p>
-                    <button class="btn btn-warning">Đặt hàng</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- SẢN PHẨM MỚI -->
-        <h2 class="text-center mt-4">SẢN PHẨM MỚI</h2>
-        <div class="row">
-            <div class="col-md-3 product">
-                <img src="product3.jpg" alt="Product 3">
-                <p>$10.00</p>
-                <button class="btn btn-warning">Đặt hàng</button>
-            </div>
-            <div class="col-md-3 product">
-                <img src="product4.jpg" alt="Product 4">
-                <p>$12.00</p>
-                <button class="btn btn-warning">Đặt hàng</button>
-            </div>
-            <div class="col-md-3 product">
-                <img src="product5.jpg" alt="Product 5">
-                <p>$8.00</p>
-                <button class="btn btn-warning">Đặt hàng</button>
-            </div>
-        </div>
-
-        <!-- SẢN PHẨM NHIỀU NGƯỜI XEM -->
-        <h2 class="text-center mt-4">SẢN PHẨM NHIỀU NGƯỜI XEM</h2>
-        <div class="row">
-            <div class="col-md-3 product">
-                <img src="product6.jpg" alt="Product 6">
-                <p>$11.00</p>
-                <button class="btn btn-warning">Đặt hàng</button>
-            </div>
-            <div class="col-md-3 product">
-                <img src="product7.jpg" alt="Product 7">
-                <p>$9.00</p>
-                <button class="btn btn-warning">Đặt hàng</button>
-            </div>
-            <div class="col-md-3 product">
-                <img src="product8.jpg" alt="Product 8">
-                <p>$7.00</p>
-                <button class="btn btn-warning">Đặt hàng</button>
-            </div>
-        </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bán hàng</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="header-meta-list">
+      <a href="/">
+        <span>154 Cửa hàng khắp cả nước</span>
+      </a>
+      <a href="/">
+        <span>Hotline: 1800.6936</span>
+      </a>
+      <a href="/">
+        <span>Freeship từ 50.000 đ</span>
+      </a>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <div class="banner">
+      <a href="sanpham.html">
+        <img src="images/banner.webp" alt="banner" />
+      </a>
+    </div>
+    <div class="container">
+      <div class="hot-product">
+        <div class="hot-product-title">
+          <h2>Sản phẩm hot</h2>
+        </div>
+        <div class="hot-product-list">
+          <div class="menu-item banner-left">
+            <a href="sanpham.html">
+              <img src="images/banner_left.webp" alt="banner-left" />
+            </a>
+          </div>
+          <div class="menu_item">
+            <div class="menu_item_image">
+                <div class="best-seller-label">Best Seller</div>
+              <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                ><img
+                  class="lazyloaded"
+                  src="images/product_1.jpg"
+                  alt="product_1"
+              /></a>
+            </div>
+            <div class="menu_item_info">
+              <div class="price_product_item">$ 1000</div>
+              <a href="dathang.html" class="btn-product">Đặt hàng</a>
+            </div>
+          </div>
+          <div class="menu_item">
+            <div class="menu_item_image">
+                <div class="best-seller-label">Best Seller</div>
+              <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                ><img
+                  class="lazyloaded"
+                  src="images/product_2.jpg"
+                  alt="product_2"
+              /></a>
+            </div>
+            <div class="menu_item_info">
+              <div class="price_product_item">$ 1000</div>
+              <a href="dathang.html" class="btn-product">Đặt hàng</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="hot-product">
+          <div class="hot-product-title">
+            <h2>Sản phẩm mới</h2>
+          </div>
+          <div class="hot-product-list">
+            <div class="menu_item">
+              <div class="menu_item_image">
+                <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                  ><img
+                    class="lazyloaded"
+                    src="images/product_3.jpg"
+                    alt="product_1"
+                /></a>
+              </div>
+              <div class="menu_item_info">
+                <div class="price_product_item">$ 1000</div>
+                <a href="dathang.html" class="btn-product">Đặt hàng</a>
+              </div>
+            </div>
+            <div class="menu_item">
+              <div class="menu_item_image">
+                <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                  ><img
+                    class="lazyloaded"
+                    src="images/product_4.jpg"
+                    alt="product_2"
+                /></a>
+              </div>
+              <div class="menu_item_info">
+                <div class="price_product_item">$ 1000</div>
+                <a href="dathang.html" class="btn-product">Đặt hàng</a>
+              </div>
+            </div>
+            <div class="menu_item">
+              <div class="menu_item_image">
+                <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                  ><img
+                    class="lazyloaded"
+                    src="images/product_5.jpg"
+                    alt="product_2"
+                /></a>
+              </div>
+              <div class="menu_item_info">
+                <div class="price_product_item">$ 1000</div>
+                <a href="dathang.html" class="btn-product">Đặt hàng</a>
+              </div>
+            </div>
+            <div class="menu_item">
+              <div class="menu_item_image">
+                <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                  ><img
+                    class="lazyloaded"
+                    src="images/product_6.jpg"
+                    alt="product_2"
+                /></a>
+              </div>
+              <div class="menu_item_info">
+                <div class="price_product_item">$ 1000</div>
+                <a href="dathang.html" class="btn-product">Đặt hàng</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="container">
+      <div class="hot-product">
+        <div class="hot-product-title">
+          <h2>Sản phẩm nhiều người xem</h2>
+        </div>
+        <div class="hot-product-list">
+          <div class="menu_item">
+            <div class="menu_item_image">
+              <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                ><img
+                  class="lazyloaded"
+                  src="images/product_3.jpg"
+                  alt="product_1"
+              /></a>
+            </div>
+            <div class="menu_item_info">
+              <div class="price_product_item">$ 1000</div>
+              <a href="dathang.html" class="btn-product">Đặt hàng</a>
+            </div>
+          </div>
+          <div class="menu_item">
+            <div class="menu_item_image">
+              <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                ><img
+                  class="lazyloaded"
+                  src="images/product_4.jpg"
+                  alt="product_2"
+              /></a>
+            </div>
+            <div class="menu_item_info">
+              <div class="price_product_item">$ 1000</div>
+              <a href="dathang.html" class="btn-product">Đặt hàng</a>
+            </div>
+          </div>
+          <div class="menu_item">
+            <div class="menu_item_image">
+              <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                ><img
+                  class="lazyloaded"
+                  src="images/product_5.jpg"
+                  alt="product_2"
+              /></a>
+            </div>
+            <div class="menu_item_info">
+              <div class="price_product_item">$ 1000</div>
+              <a href="dathang.html" class="btn-product">Đặt hàng</a>
+            </div>
+          </div>
+          <div class="menu_item">
+            <div class="menu_item_image">
+              <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                ><img
+                  class="lazyloaded"
+                  src="images/product_6.jpg"
+                  alt="product_2"
+              /></a>
+            </div>
+            <div class="menu_item_info">
+              <div class="price_product_item">$ 1000</div>
+              <a href="dathang.html" class="btn-product">Đặt hàng</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copyright@2025. Ngọc</p>
+    </div>
+  </body>
 </html>
