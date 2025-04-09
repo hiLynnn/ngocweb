@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Liên hệ - Phúc Long</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="header_nav">
+            <div class="header_logo">
+              <div class="logo_wrap">
+                <a href="/" class="logo">
+                  <img src="images/logo.png" alt="logo">
+                </a>
+            </div>
+          </div>
+          <div class="header_menu">
+            <ul class="clearfix">
+              <li>
+                <a href="/" title="Cà phê">Home</a>
+              </li>
+              <li>
+                <a href="sanpham.html" title="Trà">Menu</a>
+              </li>
+              <li>
+                <a href="dathang.html" title="Trà">Order</a>
+              </li>
+              <li>
+                <a href="khuyenmai.html" title="Trà">Promotion</a>
+              </li>
+              <li>
+                <a href="about-us.html" title="Trà">About-us</a>
+              </li>
+              <li>
+                <a href="contact.html" title="Trà">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="banner">
+        <img src="images/banner.webp" alt="banner" />
+        <h1>Liên hệ chúng tôi</h1>
+      </div>
+
+  <div class="container dflex-contact">
+    <div class="contact-form">
+      <h2>Gửi tin nhắn</h2>
+      <form>
+        <input type="text" placeholder="Họ và tên" required />
+        <input type="email" placeholder="Email" required />
+        <textarea rows="5" placeholder="Nội dung..." required></textarea>
+        <button type="submit">Gửi</button>
+      </form>
+    </div>
+
+    <div class="map">
+      <h2>Địa chỉ cửa hàng</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.063588853002!2d106.69758767481827!3d10.806605758752847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d9c39a52c3%3A0x9df6e7d574b68c87!2zUGjDumMgTG9uZyBDw7RuZyBWaW5jbw!5e0!3m2!1svi!2s!4v1682134731693!5m2!1svi!2s" 
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <div class="chatbox">
+      <h2>Hỗ trợ nhanh</h2>
+      <div class="messages" id="chatMessages">
+        <p><strong>Phúc Long:</strong> Xin chào! Tôi có thể giúp gì cho bạn?</p>
+      </div>
+      <div style="display: flex;">
+        <input type="text" id="chatInput" placeholder="Nhập tin nhắn..." />
+        <button onclick="sendMessage()">Gửi</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Copyright@2025 Van Hien University</p>
+    <p>Mã SV: - Họ tên:</p>
+    <p>Số điện thoại: </p>
+    <p>Email: </p>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById('chatInput');
+      const messages = document.getElementById('chatMessages');
+      const text = input.value.trim();
+      if (text !== '') {
+        const userMsg = document.createElement('p');
+        userMsg.innerHTML = `<strong>Bạn:</strong> ${text}`;
+        messages.appendChild(userMsg);
+        input.value = '';
+        messages.scrollTop = messages.scrollHeight;
+
+        setTimeout(() => {
+          const botReply = document.createElement('p');
+          botReply.innerHTML = `<strong>Phúc Long:</strong> Cảm ơn bạn! Chúng tôi sẽ phản hồi sớm nhất.`;
+          messages.appendChild(botReply);
+          messages.scrollTop = messages.scrollHeight;
+        }, 1000);
+      }
+    }
+  </script>
+
+</body>
+</html>

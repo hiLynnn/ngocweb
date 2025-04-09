@@ -13,70 +13,187 @@
           <div class="header_logo">
             <div class="logo_wrap">
               <a href="/" class="logo">
-                <img src="images/logo.png" alt="logo">
+                <img src="images/logo.png" alt="logo" />
               </a>
+            </div>
           </div>
-        </div>
-        <div class="header_menu">
-          <ul class="clearfix">
-            <li>
-              <a href="/" title="Cà phê">Trang chủ</a>
-            </li>
-            <li>
-              <a href="/" title="Trà">Giới thiệu</a>
-            </li>
-            <li>
-              <a href="/" title="Trà">Sản phẩm</a>
-            </li>
-            <li>
-              <a href="/" title="Trà">Dịch vụ</a>
-            </li>
-            <li>
-              <a href="/" title="Trà">Liên hệ</a>
-            </li>
-          </ul>
+          <div class="header_menu">
+            <ul class="clearfix">
+              <li>
+                <a href="/" title="Cà phê">Home</a>
+              </li>
+              <li>
+                <a href="sanpham.html" title="Trà">Menu</a>
+              </li>
+              <li>
+                <a href="dathang.html" title="Trà">Order</a>
+              </li>
+              <li>
+                <a href="khuyenmai.html" title="Trà">Promotion</a>
+              </li>
+              <li>
+                <a href="about-us.html" title="Trà">About-us</a>
+              </li>
+              <li>
+                <a href="contact.html" title="Trà">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
+
     <div class="banner">
       <img src="images/banner.webp" alt="banner" />
-      <h1>Sản phẩm</h1>
+      <h1 style="text-align: center">Đặt hàng</h1>
     </div>
+
     <div class="container gio-hang">
       <div class="cart">
-          <h2>GIỎ HÀNG</h2>
-          <table>
-              <tr>
-                  <th>STT</th>
-                  <th>Hình</th>
-                  <th>Tên sản phẩm</th>
-                  <th>Đơn giá</th>
-                  <th>Số lượng</th>
-                  <th>Thành tiền</th>
-                  <th>Thao tác</th>
-              </tr>
-              <tr>
-                  <td>1</td>
-                  <td></td>
-                  <td>san pham 1</td>
-                  <td>100</td>
-                  <td>1</td>
-                  <td>100</td>
-                  <td><span class="delete">Xóa</span></td>
-              </tr>
-          </table>
+        <h2>CHỌN SẢN PHẨM</h2>
+        <form id="order-form">
+          <label>Sản phẩm:</label>
+          <select name="product" id="product">
+            <option value="Hi-Tea Vải" data-price="30000">
+              Hi-Tea Vải - 30,000đ
+            </option>
+            <option value="Cà phê sữa" data-price="25000">
+              Cà phê sữa - 25,000đ
+            </option>
+            <option value="Trà đào cam sả" data-price="35000">
+              Bánh ngọt - 35,000đ
+            </option>
+            <option value="Trà đào cam sả" data-price="35000">
+              Trà đào cam sả - 35,000đ
+            </option>
+            <option value="Trà đào cam sả" data-price="35000">
+              Trà vải - 45,000đ
+            </option>
+            <option value="Trà đào cam sả" data-price="35000">
+              Trà hoa hồng - 35,000đ
+            </option>
+          </select>
+
+          <label>Số lượng:</label>
+          <input type="number" id="quantity" min="1" value="1" />
+
+          <label>Giá:</label>
+          <input type="text" id="price" readonly />
+
+          <label>Thành tiền:</label>
+          <input type="text" id="total" readonly />
+
+          <button class="checkout-btn" type="button" onclick="addToCart()">
+            Thêm vào giỏ
+          </button>
+        </form>
+
+        <h2>GIỎ HÀNG</h2>
+        <table id="cart-table">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Tên SP</th>
+              <th>Đơn giá</th>
+              <th>Số lượng</th>
+              <th>Thành tiền</th>
+              <th>Xóa</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
-  
+
       <div class="order">
-          <h2>ĐƠN HÀNG</h2>
-          <p><strong>Tổng:</strong> 1000000</p>
-          <input type="text" class="voucher-input" placeholder="Nhập voucher">
-          <p><strong>Tổng thanh toán:</strong> 1000000</p>
-          <button class="checkout-btn">Thanh toán</button>
+        <h2>THÔNG TIN KHÁCH HÀNG</h2>
+        <input type="text" id="customer-name" placeholder="Họ tên" />
+        <input type="text" id="customer-phone" placeholder="Số điện thoại" />
+        <input type="text" id="customer-email" placeholder="Email" />
+        <input type="text" class="voucher-input" placeholder="Nhập voucher" />
+        <p>
+          <strong>Tổng thanh toán:</strong> <span id="grand-total">0</span> đ
+        </p>
+        <button class="checkout-btn" onclick="checkout()">Thanh toán</button>
       </div>
-  </div>
-    <div class="footer">
-      <p>Copyright@2025. Ngọc</p>
     </div>
+
+    <div class="footer">
+      <p>Copyright@2025 Van Hien University</p>
+      <p>Mã SV: - Họ tên:</p>
+      <p>Số điện thoại:</p>
+      <p>Email:</p>
+    </div>
+
+    <script>
+      const productSelect = document.getElementById("product");
+      const quantityInput = document.getElementById("quantity");
+      const priceInput = document.getElementById("price");
+      const totalInput = document.getElementById("total");
+      const cartTableBody = document.querySelector("#cart-table tbody");
+      const grandTotalSpan = document.getElementById("grand-total");
+
+      let cart = [];
+
+      productSelect.addEventListener("change", updatePrice);
+      quantityInput.addEventListener("input", updatePrice);
+
+      function updatePrice() {
+        const price = parseInt(productSelect.selectedOptions[0].dataset.price);
+        const quantity = parseInt(quantityInput.value) || 1;
+        priceInput.value = price;
+        totalInput.value = price * quantity;
+      }
+
+      updatePrice();
+
+      function addToCart() {
+        const name = productSelect.value;
+        const price = parseInt(priceInput.value);
+        const quantity = parseInt(quantityInput.value);
+        const total = price * quantity;
+
+        cart.push({ name, price, quantity, total });
+        renderCart();
+      }
+
+      function renderCart() {
+        cartTableBody.innerHTML = "";
+        let totalAll = 0;
+        cart.forEach((item, index) => {
+          totalAll += item.total;
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${item.name}</td>
+            <td>${item.price}</td>
+            <td>${item.quantity}</td>
+            <td>${item.total}</td>
+            <td><span class="delete" onclick="removeItem(${index})">X</span></td>
+          `;
+          cartTableBody.appendChild(row);
+        });
+        grandTotalSpan.textContent = totalAll;
+      }
+
+      function removeItem(index) {
+        cart.splice(index, 1);
+        renderCart();
+      }
+
+      function checkout() {
+        const name = document.getElementById("customer-name").value;
+        const phone = document.getElementById("customer-phone").value;
+        const email = document.getElementById("customer-email").value;
+
+        if (!name || !phone || !email || cart.length === 0) {
+          alert("Vui lòng nhập đầy đủ thông tin và chọn ít nhất 1 sản phẩm!");
+          return;
+        }
+
+        alert("Đặt hàng thành công!\nCảm ơn bạn " + name + " đã mua hàng.");
+        cart = [];
+        renderCart();
+      }
+    </script>
   </body>
 </html>

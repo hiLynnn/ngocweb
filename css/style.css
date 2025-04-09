@@ -7,6 +7,7 @@ body{
     padding: 0;
 }
 .container {
+    max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
@@ -40,7 +41,7 @@ body{
 .banner h1{
     position: absolute;
     text-align: center;
-    color: #fff;
+    color: red;
     font-size: 36px;
     margin: 20px 0;
     text-transform: uppercase;
@@ -92,7 +93,14 @@ body{
     flex: 0 0 calc(25% - 30px);
     margin: 0 15px 40px;
     min-height: 145px;
+    transition: all 0.3s ease;
 }
+
+.menu_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
 .best-seller-label {
     position: absolute;
     top: 10px;
@@ -341,3 +349,230 @@ th {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+.contact-form, .map, .chatbox {
+    flex: 1 1 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  h2 {
+    color: #b71c1c;
+    margin-bottom: 15px;
+  }
+
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+
+  .contact-form button {
+    background: #d32f2f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .chatbox {
+    position: relative;
+  }
+
+  .chatbox .messages {
+    height: 250px;
+    overflow-y: auto;
+    background: #fafafa;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+
+  .chatbox input {
+    width: calc(100% - 70px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .chatbox button {
+    width: 60px;
+    padding: 10px;
+    margin-left: 5px;
+    background: #d32f2f;
+    border: none;
+    color: white;
+    border-radius: 5px;
+  }
+  .dflex-contact {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .section {
+    margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.section h2 {
+  font-size: 28px;
+  color: #b71c1c;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #d32f2f;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.section p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.section img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.gio-hang {
+    display: flex;
+    gap: 30px;
+    margin-top: 60px;
+  }
+  .cart, .order {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+  th, td {
+    padding: 8px;
+    text-align: center;
+  }
+  .delete {
+    color: red;
+    cursor: pointer;
+  }
+  .voucher-input, input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .checkout-btn {
+    padding: 10px 20px;
+    background: #28a745;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .checkout-btn:hover {
+    background: #218838;
+  }
+
+  .promo-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #d32f2f;
+  }
+
+  .promo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+
+  .promo-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+
+  .promo-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .promo-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .promo-content {
+    padding: 20px;
+  }
+
+  .promo-content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+  }
+
+  .promo-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .promo-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff5722;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+  }
+
+  .promo-btn {
+    display: inline-block;
+    background: #d32f2f;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .promo-btn:hover {
+    background: #b71c1c;
+  }
+  .mg-promotion{
+      margin: 50px 0;
+  }

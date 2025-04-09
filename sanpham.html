@@ -20,19 +20,22 @@
         <div class="header_menu">
           <ul class="clearfix">
             <li>
-              <a href="/" title="Cà phê">Trang chủ</a>
+              <a href="/" title="Cà phê">Home</a>
             </li>
             <li>
-              <a href="/" title="Trà">Giới thiệu</a>
+              <a href="sanpham.html" title="Trà">Menu</a>
             </li>
             <li>
-              <a href="/" title="Trà">Sản phẩm</a>
+              <a href="dathang.html" title="Trà">Order</a>
             </li>
             <li>
-              <a href="/" title="Trà">Dịch vụ</a>
+              <a href="khuyenmai.html" title="Trà">Promotion</a>
             </li>
             <li>
-              <a href="/" title="Trà">Liên hệ</a>
+              <a href="about-us.html" title="Trà">About-us</a>
+            </li>
+            <li>
+              <a href="contact.html" title="Trà">Contact</a>
             </li>
           </ul>
         </div>
@@ -50,25 +53,28 @@
           </div>
           <ul class="filter-left-list">
             <li>
-              <a href="/">Trà</a>
+              <a href="#" data-filter="all">Tất cả</a>
             </li>
             <li>
-              <a href="/">Cà phê</a>
+              <a href="#" data-filter="tra">Trà</a>
             </li>
             <li>
-              <a href="/">Nước giải khát</a>
+              <a href="#" data-filter="cafe">Cafe</a>
             </li>
             <li>
-              <a href="/">Thức uống dinh dưỡng</a>
+              <a href="#" data-filter="banh">Bánh</a>
+            </li>
+            <li>
+              <a href="#" data-filter="dinhduong">Thức uống dinh dưỡng</a>
             </li>
           </ul>
         </div>
         <div class="hot-product">
           <div class="hot-product-title">
-            <h2>Sản phẩm hot</h2>
+            <h2>Sản phẩm</h2>
           </div>
           <div class="hot-product-list">
-            <div class="menu_item">
+            <div class="menu_item" data-category="dinhduong">
               <div class="menu_item_image">
                 <a href="sanphamchitiet.html" title="Hi-Tea Vải"
                   ><img
@@ -82,7 +88,7 @@
                 <a href="dathang.html" class="btn-product">Đặt hàng</a>
               </div>
             </div>
-            <div class="menu_item">
+            <div class="menu_item" data-category="tra">
               <div class="menu_item_image">
                 <a href="sanphamchitiet.html" title="Hi-Tea Vải"
                   ><img
@@ -96,7 +102,7 @@
                 <a href="dathang.html" class="btn-product">Đặt hàng</a>
               </div>
             </div>
-            <div class="menu_item">
+            <div class="menu_item" data-category="dinhduong">
               <div class="menu_item_image">
           
                 <a href="sanphamchitiet.html" title="Hi-Tea Vải"
@@ -111,7 +117,7 @@
                 <a href="dathang.html" class="btn-product">Đặt hàng</a>
               </div>
             </div>
-            <div class="menu_item">
+            <div class="menu_item" data-category="cafe">
               <div class="menu_item_image">
           
                 <a href="sanphamchitiet.html" title="Hi-Tea Vải"
@@ -126,7 +132,7 @@
                 <a href="dathang.html" class="btn-product">Đặt hàng</a>
               </div>
             </div>
-            <div class="menu_item">
+            <div class="menu_item" data-category="banh">
               <div class="menu_item_image">
           
                 <a href="sanphamchitiet.html" title="Hi-Tea Vải"
@@ -141,7 +147,7 @@
                 <a href="dathang.html" class="btn-product">Đặt hàng</a>
               </div>
             </div>
-            <div class="menu_item">
+            <div class="menu_item" data-category="cafe">
               <div class="menu_item_image">
           
                 <a href="sanphamchitiet.html" title="Hi-Tea Vải"
@@ -156,7 +162,37 @@
                 <a href="dathang.html" class="btn-product">Đặt hàng</a>
               </div>
             </div>
-            <div class="menu_item">
+            <div class="menu_item" data-category="cafe">
+              <div class="menu_item_image">
+          
+                <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                  ><img
+                    class="lazyloaded"
+                    src="images/product_5.jpg"
+                    alt="product_2"
+                /></a>
+              </div>
+              <div class="menu_item_info">
+                <div class="price_product_item">$ 1000</div>
+                <a href="dathang.html" class="btn-product">Đặt hàng</a>
+              </div>
+            </div>
+            <div class="menu_item" data-category="cafe">
+              <div class="menu_item_image">
+          
+                <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                  ><img
+                    class="lazyloaded"
+                    src="images/product_6.jpg"
+                    alt="product_2"
+                /></a>
+              </div>
+              <div class="menu_item_info">
+                <div class="price_product_item">$ 1000</div>
+                <a href="dathang.html" class="btn-product">Đặt hàng</a>
+              </div>
+            </div>
+            <div class="menu_item" data-category="tra">
               <div class="menu_item_image">
           
                 <a href="sanphamchitiet.html" title="Hi-Tea Vải"
@@ -171,7 +207,7 @@
                 <a href="dathang.html" class="btn-product">Đặt hàng</a>
               </div>
             </div>
-            <div class="menu_item">
+            <div class="menu_item" data-category="banh">
               <div class="menu_item_image">
           
                 <a href="sanphamchitiet.html" title="Hi-Tea Vải"
@@ -186,12 +222,106 @@
                 <a href="dathang.html" class="btn-product">Đặt hàng</a>
               </div>
             </div>
+            <div class="menu_item" data-category="banh">
+              <div class="menu_item_image">
+          
+                <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                  ><img
+                    class="lazyloaded"
+                    src="images/product_1.jpg"
+                    alt="product_2"
+                /></a>
+              </div>
+              <div class="menu_item_info">
+                <div class="price_product_item">$ 1000</div>
+                <a href="dathang.html" class="btn-product">Đặt hàng</a>
+              </div>
+            </div>
+            <div class="menu_item" data-category="banh">
+              <div class="menu_item_image">
+          
+                <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                  ><img
+                    class="lazyloaded"
+                    src="images/product_11.jpg"
+                    alt="product_2"
+                /></a>
+              </div>
+              <div class="menu_item_info">
+                <div class="price_product_item">$ 1000</div>
+                <a href="dathang.html" class="btn-product">Đặt hàng</a>
+              </div>
+            </div>
+            <div class="menu_item" data-category="dinhduong">
+              <div class="menu_item_image">
+          
+                <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                  ><img
+                    class="lazyloaded"
+                    src="images/product_1.jpg"
+                    alt="product_2"
+                /></a>
+              </div>
+              <div class="menu_item_info">
+                <div class="price_product_item">$ 1000</div>
+                <a href="dathang.html" class="btn-product">Đặt hàng</a>
+              </div>
+            </div>
+            <div class="menu_item" data-category="dinhduong">
+              <div class="menu_item_image">
+          
+                <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                  ><img
+                    class="lazyloaded"
+                    src="images/product_1.jpg"
+                    alt="product_2"
+                /></a>
+              </div>
+              <div class="menu_item_info">
+                <div class="price_product_item">$ 1000</div>
+                <a href="dathang.html" class="btn-product">Đặt hàng</a>
+              </div>
+            </div>
+            <div class="menu_item" data-category="tra">
+              <div class="menu_item_image">
+          
+                <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                  ><img
+                    class="lazyloaded"
+                    src="images/product_2.jpg"
+                    alt="product_2"
+                /></a>
+              </div>
+              <div class="menu_item_info">
+                <div class="price_product_item">$ 1000</div>
+                <a href="dathang.html" class="btn-product">Đặt hàng</a>
+              </div>
+            </div>
+            <div class="menu_item" data-category="tra">
+              <div class="menu_item_image">
+          
+                <a href="sanphamchitiet.html" title="Hi-Tea Vải"
+                  ><img
+                    class="lazyloaded"
+                    src="images/product_3.jpg"
+                    alt="product_2"
+                /></a>
+              </div>
+              <div class="menu_item_info">
+                <div class="price_product_item">$ 1000</div>
+                <a href="dathang.html" class="btn-product">Đặt hàng</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="footer">
-      <p>Copyright@2025. Ngọc</p>
+      <p>Copyright@2025 Van Hien University</p>
+      <p>Mã SV: - Họ tên:</p>
+      <p>Số điện thoại: </p>
+      <p>Email: </p>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
